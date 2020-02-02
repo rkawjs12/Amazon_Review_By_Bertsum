@@ -1,0 +1,30 @@
+1. project 설치 방법
+  -다른 곳에 새로 설치 할때  
+  프로젝트 폴더를 다른데 카피하고   
+  카피한 폴더에서 front폴더 안에  node_modules 폴더를 삭제한다. 
+  프로젝트 폴더를 압축하여 다른 컴퓨터에 카피한 후  
+  1) cli 창에서 front폴더로 이동한후  노드 모듈을 설치한다.
+    npm i  실행(이 프로젝트에 필요한 모든 모듈을 알아서 설치)     
+    주의) 위에 실행하기 전에 반드시 node가 깔려 있어야 한다.
+  2)backpy_server로 이동하여    
+    pip install bert-extractive-summarizer     
+    pip install spacy==2.1.3    
+    pip install transformers==2.2.0      
+    pip uninstall neuralcoref       
+    pip install neuralcoref —no-binary neuralcoref   
+
+
+2. 서버 실행방법
+  1) front 폴더로 이동해서  서버 실행    
+    npm run dev <- cli 창에 입력하고 엔터    
+    vue front server가 실행되며 localhost:3000번으로 접속한다.
+  2)backpy_server 폴더로 이동해서 서버실행   
+    python app.py     
+    백엔드 서버로 플라스크가 실행된다. 
+
+3. 서버에서 파일 변경
+   backpy_server/static  폴더 안에 파일을 변경
+   1.txt 본문 원본
+   1_1.txt 본문 요약    
+   img/1.png 도표 및 표현한 이미지
+   위의 세개 종류 파일을 변경하여 사용하면 된다.
